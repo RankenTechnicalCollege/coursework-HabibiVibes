@@ -4,3 +4,59 @@
     File Name: order.html
     Date: 09/02/2025
 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Page</title>
+</head>
+
+<body>
+    <header>
+        <h2>Tech Gadget Hub</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Welcome Page</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="order.html">Order</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Place Your Order</h2>
+            <p>848 TechStreet, Silicon Valley, CA 94043</p>
+            <p><a href="tel:(123) 456- 7890">Phone: (123) 456-7890</a></p>
+            <p><a href="mailto:atechgadgethub@gmail.com">Email:atechgadgethub@gmail.com</a></p>
+            <a href="thankyou.html">
+                <button>Click here to place your order</button>
+            </a>
+            <h3>Order Form</h3>
+            <form action="#" method="post">
+                <label for="name">Full Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="product">Select Product:</label><br>
+                <select id="product" name="product" required>
+                    <option value="">--Please choose an option--</option>
+                    <option value="iphone16e">iPhone 16e</option>
+                    <option value="meta-ai">Meta AI Smart Glasses</option>
+                    <option value="golf-simulator">Foresight Sports GCQuad SIG8 Golf Simulator</option>
+                </select><br><br>
+
+                <label for="quantity">Quantity:</label><br>
+                <input type="number" id="quantity" name="quantity" min="1" required><br><br>
+
+                <input type="submit" value="Submit Order">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; [2025] A Tech Gadget Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>
