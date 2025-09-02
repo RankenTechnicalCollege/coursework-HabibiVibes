@@ -21,6 +21,10 @@ header, footer {
     text-align: center;
 }
 
+footer div {
+    background-color: #66ffff;
+}
+
 /* Style rules for main content */
 main {
     padding: 2%;
@@ -58,9 +62,41 @@ main a {
 }
 
 /* Orange */
+#orange {
+    background-color: #ff8533;
+}
 
+#orange-rgb {
+    background-color: #ff8533(255, 133, 51)
+}
+
+#orange-hsl {
+    background-color: #ff8533(24, 100%, 60%)
+}
 
 /* Purple */
+#purple {
+    background-color: #cc00cc;
+}
+
+#purple-rgb {
+    background-color: #cc00cc(204, 0, 204)
+}
+
+#purple-hsl {
+    background-color: #cc00cc(300, 100%, 40%)
+}
 
 
 /* Green */
+#green {
+    background-color: #00ff99;
+}
+
+#green-rgb {
+    background-color: #00ff99(0, 255, 153)
+}
+
+#green-hsl {
+    background-color: #00ff99(156, 100%, 50%)
+}
