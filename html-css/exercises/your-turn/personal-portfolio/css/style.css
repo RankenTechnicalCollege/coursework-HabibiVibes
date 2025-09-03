@@ -1,0 +1,17 @@
+/* 
+Student Name: Dillon Anderson
+Date: 09/03/2025
+File Name: style.css
+*/
+
+/* CSS Reset - A CSS reset is used to create a consistent baseline for styling across different web browsers. Since browsers apply their own default styles to HTML elements, these styles can vary, leading to inconsistencies in how a webpage appears. */
+body, header, nav, main, footer, img, h1 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
