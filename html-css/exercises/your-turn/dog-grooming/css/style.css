@@ -13,12 +13,15 @@ body, header, nav, main, footer, img, h1 {
 
 /* Style rule for body element */
 body {
-
+   background-color: #ffe6cc;
+    color: #000000;
+    text-decoration: none; 
 }
 
 /* Style rule for image element */
 img {
-
+    max-width: 100%;
+    display: block;
 }
 
 /* Style rule for header element */
@@ -86,7 +89,7 @@ footer {
 }
 
 footer h2 {
-    
+
 }
 
 footer p {
