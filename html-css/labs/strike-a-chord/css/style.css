@@ -78,7 +78,7 @@ main ul {
     font-weight: bold;
 }
 
-#piano, #guitar, #violin {
+#Piano, #Guitar, #Violin {
     width: 29%;
     float: left;
     margin: 0 2%;
@@ -98,6 +98,10 @@ main ul {
     color: #4645a8;
     text-decoration: none;
     font-weight: bold;
+}
+
+#lessons {
+    background-color: #c0caf7;
 }
 
 .map {
