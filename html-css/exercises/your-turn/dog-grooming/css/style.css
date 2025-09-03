@@ -13,8 +13,8 @@ body, header, nav, main, footer, img, h1 {
 
 /* Style rule for body element */
 body {
-    background-color: #ffe6cc;
-    color: #000000;
+    background-color: #000000;
+    color: #ffffff;
     text-decoration: none; 
 }
 
