@@ -28,6 +28,10 @@ h1 {
     font-style: italic;
 }
 
+h2 {
+    background-color:#c0caf7;
+}
+
 /* Style rules for navigation area */
 nav {
     background-color: #373684;
@@ -62,6 +66,10 @@ main {
 
 main p {
     font-size: 1.25em;
+}
+
+main ul {
+    background-color: #c0caf7;
 }
 
 .action {
