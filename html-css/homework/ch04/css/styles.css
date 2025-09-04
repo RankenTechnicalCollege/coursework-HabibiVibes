@@ -20,12 +20,39 @@ p {
 
 /* 2b. Absolute measurement */
 h1 {
-    font-size: 32px;
+    font-size: 45px;
+    text-align: center;
+    text-decoration: underline;
 }
 
 /* 2c. HEX or RGB color value */
 body {
     background-color: #000;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #ffffff;
+    color:#ffffff;
 }
+
+/* 2d. Descendant Selector */
+nav ul li a {
+    text-decoration: none;
+    color:#ffffff;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    padding: 4%;
+}
+
+/* 2e. Multiple Selectors */
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+/* 2f. Child Selector */
