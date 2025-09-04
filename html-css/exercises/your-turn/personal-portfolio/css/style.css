@@ -16,6 +16,8 @@ img {
     max-width: 100%;
     display: horizontal;
     padding: 2%;
+    float: none;
+    clear: none;
 }
 
 /* Style rule for body element */

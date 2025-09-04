@@ -21,7 +21,9 @@ body {
 /* Style rule for image element */
 img {
     max-width: 100%;
-    display: block;
+    display: horizontal;
+    float: none;
+    clear: none;
 }
 
 /* Style rule for header element */
@@ -76,36 +78,26 @@ main p {
     text-align: center;
 }
 
-#main_services {
-
-}
-
-#main_service {
-
-}
-
-#main_about {
-
-}
-
 #main_contact {
     text-align: center;
 }
 
-#services {
-
+#service_page img {
+    display: horizontal;
+    padding: 4%;
+    padding-bottom: 1%;
 }
 
-#service {
-
-}
-
-#about {
-
+#service_page h2 {
+    text-align: center;
 }
 
 #contact {
+    text-align: center;
+}
 
+.service {
+    text-align: center;
 }
 
 /* Style rules for footer element */
