@@ -1,1 +1,31 @@
 /* Basic Page Setup */
+.wrapper {
+    width: 80%;
+    /* Relative measurements */
+    margin: 0 auto;
+    /* 1b. wrapper div centered with margins */
+}
+
+/* Semantic Structure (header, nav, main, footer) */
+header,
+main,
+footer {
+    padding: 1.2em;
+}
+
+/* 2a. Relative measurement */
+p {
+    font-size: 1.2em;
+}
+
+/* 2b. Absolute measurement */
+h1 {
+    font-size: 32px;
+}
+
+/* 2c. HEX or RGB color value */
+body {
+    background-color: #000;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #ffffff;
+}
