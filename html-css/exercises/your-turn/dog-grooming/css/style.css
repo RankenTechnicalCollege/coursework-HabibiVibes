@@ -13,8 +13,8 @@ body, header, nav, main, footer, img, h1 {
 
 /* Style rule for body element */
 body {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #ffe6cc;
+    color: #000000;
     text-decoration: none; 
 }
 
@@ -30,24 +30,30 @@ header {
 }
 
 header h1 {
-
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 /* Style rule for nav elements */
 nav {
-
+    background: linear-gradient(135deg, #000000, #434343); /* Black to dark gray */
 }
 
 nav ul {
-
+    text-align: center;
 }
 
 nav li {
-
+    display: inline-block;
+    padding: 2%;
+    font-weight: bold;
+    font-size: 1.75em;
 }
 
 nav li a {
-
+    text-decoration: none;
+    color:#ffffff;
 }
 
 /* Style rule for the main element */
@@ -56,15 +62,34 @@ main {
 }
 
 main h2 {
-
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.75em;
 }
 
 main h3 {
-
+    text-align: center;
+    font-weight: bold;
 }
 
 main p {
+    text-align: center;
+}
 
+#main_services {
+
+}
+
+#main_service {
+
+}
+
+#main_about {
+
+}
+
+#main_contact {
+    text-align: center;
 }
 
 #services {
@@ -85,21 +110,36 @@ main p {
 
 /* Style rules for footer element */
 footer {
-
+    background: linear-gradient(135deg, #000000, #434343); /* Black to dark gray */
 }
 
 footer h2 {
-
+    text-align: center;
+    color: #ffffff;
 }
 
 footer p {
-
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1em;
 }
 
 footer ul {
-
+    list-style: none;
+    text-align: center;
+    color:#ffffff;
 }
 
 footer li {
+    text-decoration: none;
+    display: inline-block;
+    padding: 2%;
+    font-weight: bold;
+    font-size: 1.75em;
+}
 
+footer li a {
+    text-decoration: none;
+    color:#ffffff;
 }
