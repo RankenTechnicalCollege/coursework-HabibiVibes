@@ -12,6 +12,19 @@ body {
 	background-color: #e4f1f6;
 }
 
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Style rule for mobile viewport */
+
+
+/* Style rule to hide tablet-desk class */
+.tablet-desktop {
+    display: none;
+}
+
 /* Style rule for header */
 header {
 	font-family: Verdana, Arial, sans-serif;
@@ -26,15 +39,21 @@ nav {
 	padding: 1%;
     margin-bottom: 1%;
     background-color: #67afcb;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }
 
 nav ul {
     text-align: center;
+    text-decoration: none;
 }
 
 nav li {
     font-size: 1.5em;
     padding: 4%;
+    display: inline-block;
+    font-family: 'B612' ;
 }
 
 nav li a {
@@ -49,6 +68,8 @@ main {
 	margin: 1% 1% 15%;
 	padding: 1%;
     font-size: 1.5em;
+    border-radius: 12px;
+    font-family: 'Crimson Text';
 }
 
 #image {
