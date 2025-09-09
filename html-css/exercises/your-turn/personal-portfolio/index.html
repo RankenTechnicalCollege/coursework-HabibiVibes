@@ -7,14 +7,16 @@
 <head>
     <title>Dillon Anderson - Personal Portfolio</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-            <img src="images/Portfolio Picture ACTUAL.jpg" alt="Dillon Anderson">
-            <img src="images/portfolio_picture_2.JPG" alt="Wedding Picture">
-            <img src="images/wedding_picture_3.JPG" alt="wedding vows">
-        <h1>Dillon Anderson</h1>
+        <h1>Welcome to My Portfolio</h1>
+    </header>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -23,40 +25,21 @@
                 <li><a href="Contact.html">Contact</a></li>
             </ul>
         </nav>
-    </header>
 
+    <main>
     <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! I'm Dillon Anderson, a web developer with a passion for creating beautiful and functional websites. I specialize in HTML, CSS, and JavaScript.</p>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Project One</h3>
-            <p>A brief description of Project One.</p>
-        </div>
-        <div class="project">
-            <h3>Project Two</h3>
-            <p>A brief description of Project Two.</p>
+            <div id="pictures" class="tablet-desk">
+                <img src="images/Portfolio Picture ACTUAL.jpg" alt="Dillon Anderson" class="round">
+                <img src="images/portfolio_picture_2.JPG" alt="Wedding Picture" class="round">
+            </div>
+                <img src="images/wedding_picture_3.JPG" alt="wedding vows" class="round">
+        <div class="about-home">
+            <h2>About Me</h2>
+            <p>Hello! I'm Dillon Anderson, a web developer with a passion for creating beautiful and functional websites. I specialize in HTML, CSS, and JavaScript.</p>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form action="#" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <button type="submit">Send</button>
-        </form>
-    </section>
+    </main>
 
     <footer>
         <p>&copy; 2025 Dillon Anderson. All rights reserved.</p>

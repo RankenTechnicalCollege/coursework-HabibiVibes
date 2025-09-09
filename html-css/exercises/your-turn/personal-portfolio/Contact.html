@@ -7,12 +7,15 @@
 <head>
     <title>Contact Me</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <img src="images/Portfolio Picture ACTUAL.jpg" alt="Dillon Anderson">
-        <h1>Dillon Anderson</h1>
+        <h1>Welcome to My Portfolio</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -24,19 +27,32 @@
     </header>
 
     <section id="contact">
-        <h2>Contact Me</h2>
-        <form action="#" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+        <div class="contact-me">
+            <h2>Contact Me</h2>
+            <p>Please feel free to reach me at:</p>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <h2>Email:</h2>
+            <p><a href="mailto:dillon_anderson@insideranken.org" class="email-link">dillon_anderson@insideranken.org</a></p>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
+            <h2>Phone:</h2>
+            <p class="tel-link"><a href="tel:(314)803-5478">(314)803&#8209;5478</a></p>
 
-            <button type="submit">Send</button>
-        </form>
+            <h2>ALL SOCIALS:</h2>
+            <p>@dcanderson_</p>
+        </div>
+
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
     </section>
 
     <footer>
