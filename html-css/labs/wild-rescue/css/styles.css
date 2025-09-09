@@ -5,7 +5,7 @@ File Name: styles.css
 */
 
 /* CSS Reset */
-body, header, nav, main, footer, img, h1, h3 {
+body, header, nav, main, footer, img, h1, h3, ul {
     margin: 0;
     padding: 0;
     border: 0;
@@ -21,6 +21,38 @@ img {
     display: block; 
 }
 
+/* Style rules for mobile viewport */
+.mobile {
+    display: block;
+}
+
+/* Style rules to show mobile class and hide tab-desk class */
+.tab-desk {
+    display: none;
+}
+
+
+/* Style rules for header area */
+.mobile h1 h3 {
+    padding: 2%;
+    text-align: center;
+}
+
+.mobile h1 {
+  font-family: "Emblema One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.mobile h3 {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+} 
+
+
 /* Style rules for navigation area */
 nav {
     background-color: #2a1f14;
@@ -28,15 +60,15 @@ nav {
 
 nav ul {
     list-style-type: none;
-    margin: 0;
     text-align: center;
 }
 
 nav li {
-    display: inline-block;
+    display: block;
     font-size: 1.5em;
     font-family: Geneva, Arial, sans-serif;
     font-weight: bold;
+    border-top: 0.5px solid #f6eee4;
 }
 
 nav li a {
@@ -50,9 +82,12 @@ nav li a {
 }
 
 /* Styles rules for main content */
-main {
-    padding: 2%;
-    font-family: verdana, arial, sans-serif;
+main  {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  padding: 2%;
+  font-family: verdana, arial, sans-serif;
 }
 
 main p {
@@ -80,8 +115,29 @@ main ul {
     text-align: center;
 }
 
+.round {
+    border-radius: 6px;
+}
+
+#info ul {
+    margin-left: 10%;
+}
+
 #contact {
     text-align: center;
+}
+
+.tel-link {
+    background-color: #2a1f14;
+    padding: 2%;
+    width: 80%;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    color: #f6eee4;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 /* Style rules for footer content */
