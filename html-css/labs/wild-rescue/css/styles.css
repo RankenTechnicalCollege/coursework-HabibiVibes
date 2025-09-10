@@ -205,5 +205,30 @@ footer a {
     #info ul {
         margin-left: 5%;
     }
+}
 
+/* Media Query for Large Desktop Viewport */
+@media only screen and (min-width: 1921px) {
+    body {
+        background: linear-gradient(#f6eee4, #78593a);
+    }
+
+    #wrapper {
+        width: 1920px;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    main {
+        background-color: #f6eee4;
+    }
+}
+
+/* Media Query for Print */
+@media print {
+    body {
+        background-color: #000000;
+    }
 }
