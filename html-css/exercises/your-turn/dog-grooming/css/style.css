@@ -5,10 +5,19 @@ File Name: style.ss
 */
 
 /* Style Reset */
-body, header, nav, main, footer, img, h1 {
+body, header, nav, main, footer, img, h1, ul {
     margin: 0;
     padding: 0;
     border: 0;
+}
+
+/* mobile style rules begin */
+.tablet-desk {
+    display: none;
+}
+
+.round {
+    border-radius: 8px;
 }
 
 /* Style rule for body element */
@@ -44,13 +53,18 @@ nav {
 
 nav ul {
     text-align: center;
+    font-family: "Red Hat Text", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 nav li {
-    display: inline-block;
+    display: block;
+    font-size: 2em;
     padding: 2%;
     font-weight: bold;
-    font-size: 1.75em;
+    border-top: 1px solid #ffe6cc;
 }
 
 nav li a {
@@ -78,26 +92,24 @@ main p {
     text-align: center;
 }
 
-#main_contact {
-    text-align: center;
-}
-
-#service_page img {
-    display: horizontal;
-    padding: 4%;
-    padding-bottom: 1%;
-}
-
-#service_page h2 {
-    text-align: center;
-}
-
 #contact {
     text-align: center;
 }
 
-.service {
-    text-align: center;
+#service {
+  font-family: "Story Script", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tel-link {
+    text-decoration: none;
+    color: #000000;
+}
+
+.email-link {
+    text-decoration: none;
+    color: #000000;
 }
 
 /* Style rules for footer element */
@@ -125,10 +137,11 @@ footer ul {
 
 footer li {
     text-decoration: none;
-    display: inline-block;
+    display: block;
     padding: 2%;
     font-weight: bold;
     font-size: 1.75em;
+    border-top: 1px solid #ffe6cc;
 }
 
 footer li a {
