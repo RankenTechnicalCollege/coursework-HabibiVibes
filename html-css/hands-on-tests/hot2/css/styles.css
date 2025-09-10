@@ -1,0 +1,83 @@
+/* CSS Reset */
+body, header, nav, main, footer, img, h1, ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Style rule for body element */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4
+}
+
+/* Global Styles */
+nav {
+    background: linear-gradient(to left, #00cc66 0%, #ff0000 100%);
+}
+
+nav ul {
+    text-align: center;
+    list-style-type: none;
+}
+
+nav li {
+    display: inline-block;
+    padding: 4%;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+/* Style rules for images */
+img {
+    max-width: 100%;
+}
+
+/* Style rules for header content */
+header {
+    background-color: #fff;
+    color: black;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    padding: 2%;
+    font-size: 1.5em;
+}
+
+
+
+/* Style rules for main content */
+#hero p {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#about p {
+    font-size: 1.5em;
+}
+
+#about p a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+#about img {
+    float: right;
+}
+
+p.clear {
+    clear: right;
+}
+
+
+/* Style rules for footer element */
