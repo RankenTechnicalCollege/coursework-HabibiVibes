@@ -11,9 +11,6 @@ body, header, nav, main, footer, img, h1, ul {
     border: 0;
 }
 
-.tablet-desk {
-    display: none;
-}
 /* Style rule for images */
 img {
     max-width: 100%;
@@ -21,7 +18,7 @@ img {
 }
 
 .round {
-   border-radius: 10px;
+   border-radius: 8px;
 }
 
 /* Style rule for body element */
@@ -61,13 +58,12 @@ nav ul {
 }
 
 nav li {
-    display: block;
+    display: inline-block;
     font-size: 2em;
-    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
 }
 
 nav li a {
-    display: block;
     color: #fff;
     text-align: center;
     padding: 0.5em 1em;
@@ -75,15 +71,20 @@ nav li a {
 }
 
 /* Style rule for about section */
-#about {
+.about {
+    padding: 2%;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.about-home { 
-  font-family: "Red Hat Text", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+.about-me {
+    padding: 2%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /* Style rule for footer elements */
@@ -93,9 +94,100 @@ footer {
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
     text-align: center;
+    padding: 1%;
 }
 
 footer a {
     color:#fff;
     text-decoration: none;
 }
+
+/* Media Query for Mobile Viewport */
+@media (min-width: 400px) {
+    /* Mobile Viewport: Show mobile class and hide tab-desk class */
+    .mobile {
+        display: block;
+    }
+    .tab-desk {
+        display: none;
+    }
+
+    /* Mobile Viewport: Style rule for nav area */
+    nav li {
+        font-size: 1.5em;
+        display: block;
+        border-bottom: #fff solid 1px;
+        padding: 2;
+    }
+
+    nav li a {
+        padding: 0.5em 2em;
+        text-align: center;
+    }
+}
+
+/* Style rules for tablet viewport */
+@media screen and (min-width: 620px), print {
+
+    /* Tablet Viewport: Show tab-desk class and hide mobile class */
+    .mobile {
+        display: none;
+    }
+    .tab-desk {
+        display: block;
+    }
+
+    /* Tablet Viewport: Style rule for nav area */
+    nav li {
+        font-size: 1.5em;
+        border-top: none;
+        border-right: 1px solid #fff;
+        border-bottom: none;
+    }
+
+    nav li a {
+        padding: 0.5em 1em;
+        display: block;
+        border-top: 1px solid #fff;
+    }
+}
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 1000px), print {
+
+    /* Desktop Viewport: Style rule for nav area */
+    nav li {
+        font-size: 1.5em;
+        display: inline-block;
+        padding: 1%;
+    }
+
+    nav li a {
+        text-align: center;
+
+    }
+
+    nav li a:hover {
+        background-color: #555;
+    }
+
+    /* Desktop Viewport: Style rule for header content */
+    header {
+        padding: 1%;
+    }
+}
+
+/* Media Query for Large Desktop Viewport */
+@media screen and (min-width: 1900px), print {
+
+    /* Large Desktop Viewport: Style rule for nav area */
+    nav li {
+        font-size: 2em;
+    }
+
+    nav li a {
+        padding: 0.5em 2em;
+    }
+}
+
+
