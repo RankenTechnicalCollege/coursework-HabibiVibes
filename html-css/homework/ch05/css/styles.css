@@ -1,0 +1,185 @@
+/*
+Author: Dillon Anderson
+Date: 09/11/2025
+File Name: styles.css
+*/
+
+/* CSS Reset */
+body, header, nav, main, footer, img, h1, h3, ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Style rule for images */
+img {
+    max-width: 100%;
+    display: block; 
+    margin: 0 auto;
+    height: auto;
+}
+
+.box {
+    border: 2px solid #000000;
+    border-radius: 8px;
+}
+
+/* Style rules for font */
+.miniver-regular {
+    font-family: "Miniver", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+/* Style rules for header area */
+#header h1, #header h2 {
+    background: linear-gradient(to right, #9e5f11f6, #fcfbfbf6);
+    padding: 1.5%;
+    text-align: center;
+}
+
+/* Style rules for body */
+body {
+    background-color: #ffffffcb; 
+}
+
+/* Style rules for navigation area */
+nav {
+    background: linear-gradient(to right, #9e5f11f6, #fcfbfbf6);
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "width" 100;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav li {
+    display: block;
+    font-size: 1.5em;
+    border-top: 1px solid #000000;
+
+}
+
+nav li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#contact {
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    padding: 2%;
+}
+
+#contact p {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#contact li {
+    text-align: center;
+    list-style-type: none;
+}
+
+#contact li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.2em;
+}
+
+/* Style rules for main area */
+main {
+    padding: 2%;
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "width" 100;
+}
+
+main h2 {
+    text-align: center;
+    padding-bottom: 1%;
+    font-size: 2em;
+}
+
+/* Style rules for footer area */
+footer {
+    background: linear-gradient(to right, #9e5f11f6, #fcfbfbf6);
+    text-align: center;
+    padding: 1%;
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "width" 100;
+}
+
+/* Media query for mobile class */
+@media (max-width: 767px) {
+    .mobile {
+        display: block;
+    }
+
+    .tab-desk {
+        display: none;
+    }
+
+    nav li {
+        display: block;
+        border-top: 1px solid #000000;
+        border-right: none;
+        padding: 1%;
+    }
+}
+
+/* Media query for tab-desk class */
+@media (min-width: 768px) {
+    .tab-desk {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    nav {
+        border-top: 1px solid #000000;
+        border-bottom: 1px solid #000000;
+    }
+
+    nav li {
+        display: inline-block;
+        padding: 2%;
+        border-top: none;
+    }
+
+    nav li a:hover {
+        color: #fcfbfbf6;
+    }
+
+    main p {
+        font-size: 1.5em;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+
+}
+
+
+
