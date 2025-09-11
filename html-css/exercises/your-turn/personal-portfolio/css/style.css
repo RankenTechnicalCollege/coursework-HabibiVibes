@@ -102,6 +102,29 @@ footer a {
     text-decoration: none;
 }
 
+/* Media Query for Mobile Viewport */
+@media (min-width: 400px) {
+    /* Mobile Viewport: Show mobile class and hide tab-desk class */
+    .mobile {
+        display: block;
+    }
+    .tab-desk {
+        display: none;
+    }
+
+    /* Mobile Viewport: Style rule for nav area */
+    nav li {
+        font-size: 1.5em;
+        display: block;
+        border-bottom: #fff solid 1px;
+        padding: 2;
+    }
+
+    nav li a {
+        padding: 0.5em 2em;
+        text-align: center;
+    }
+}
 
 
 /* Style rules for tablet viewport */
@@ -116,10 +139,7 @@ footer a {
     }
 
     /* Tablet Viewport: Style rule for nav area */
-    nav{
-        display: inline-block;
-    }
-    
+
     nav li {
         font-size: 1.5em;
         border-top: none;
