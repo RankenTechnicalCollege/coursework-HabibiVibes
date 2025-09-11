@@ -58,7 +58,7 @@ nav ul {
 }
 
 nav li {
-    display: inline-block;
+    display: block;
     font-size: 2em;
     border-right: 1px solid #fff;
 }
@@ -150,8 +150,6 @@ footer a {
 
     nav li a {
         padding: 0.5em 1em;
-        border-top: 1px solid #fff;
-        display: block;
     }
 }
 
