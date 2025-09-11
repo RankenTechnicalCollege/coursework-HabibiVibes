@@ -15,10 +15,26 @@ body, header, nav, main, footer, img, h1, ul {
 img {
     max-width: 100%;
     display: block;
+    margin: 0 auto;
+    height: auto;
 }
 
 .round {
    border-radius: 8px;
+}
+
+.tel-link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.contact-info a {
+    color: #ffffff;
+    text-decoration: none;
 }
 
 /* Style rule for body element */
@@ -114,7 +130,7 @@ footer a {
 
     /* Mobile Viewport: Style rule for nav area */
     nav li {
-        font-size: 1.5em;
+        font-size: 1.2em;
         display: block;
         border-bottom: #fff solid 1px;
         padding: 2;
@@ -141,7 +157,7 @@ footer a {
     /* Tablet Viewport: Style rule for nav area */
 
     nav li {
-        font-size: 1.5em;
+        font-size: 2em;
         border-top: none;
         border-right: 1px solid #fff;
         border-bottom: none;
@@ -151,10 +167,17 @@ footer a {
     nav li a {
         padding: 0.5em 1em;
     }
+
+    body {
+        font-size: 1.em;
+    }
 }
 
 /* Media Query for Desktop Viewport */
 @media screen and (min-width: 1000px), print {
+    .tab-desk {
+        display: block;
+    }
 
     /* Desktop Viewport: Style rule for nav area */
     nav li {
@@ -181,9 +204,13 @@ footer a {
 /* Media Query for Large Desktop Viewport */
 @media screen and (min-width: 1900px), print {
 
+    .tab-desk {
+        display: block;
+    }
+
     /* Large Desktop Viewport: Style rule for nav area */
     nav li {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     nav li a {
