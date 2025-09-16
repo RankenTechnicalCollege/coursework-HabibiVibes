@@ -5,7 +5,7 @@ File Name: style.css
 */
 
 /* CSS Reset - A CSS reset is used to create a consistent baseline for styling across different web browsers. Since browsers apply their own default styles to HTML elements, these styles can vary, leading to inconsistencies in how a webpage appears. */
-body, header, nav, main, footer, img, h1, ul {
+body, header, nav, main, footer, img, h1, ul, figure, figcaption, article, aside, section {
     margin: 0;
     padding: 0;
     border: 0;
@@ -95,13 +95,45 @@ nav li a {
     font-style: normal;
 }
 
-.about-me {
-    padding: 2%;
+.about_me {
+    font-size: 1.25em;
+    line-height: 1.6;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
+
+article h3 {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+}
+
+section {
+    background-color: #555;
+    padding: 2%;
+    margin-top: 1%;
+    color: #fff;
+    box-shadow: 4px 4px 8px rgba(202, 201, 201, 0.445);
+}
+
+figcaption {
+    font-style: italic;
+    text-align: center;
+    padding-top: 0.5%;
+}
+
+.about_me {
+    text-shadow: 4px 4px 8px rgba(190, 188, 188, 0.5);
+}
+
+section:hover {
+    box-shadow: 4px 4px 12px rgba(255, 255, 255, 0.7);
+}
+
 
 /* Style rule for footer elements */
 footer {
@@ -140,6 +172,19 @@ footer a {
         padding: 0.5em 2em;
         text-align: center;
     }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1em;
+        padding: 2%;
+    }
+
+    article {
+        font-size: 1em;
+        grid-column: 1 / span 1;
+        text-align: justify;
+    }
 }
 
 
@@ -171,6 +216,26 @@ footer a {
     body {
         font-size: 1.em;
     }
+
+    .grid {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 2fr 2fr;
+        padding: 2%;
+    }
+
+    aside {
+        font-size: 1.75em;
+        grid-column: span 2;
+        text-align: center;
+    }
+
+    section {
+        padding-bottom: 1%;
+        line-height: 1.6;
+        text-align: justify;
+        text-justify: inter-word;
+    }
 }
 
 /* Media Query for Desktop Viewport */
@@ -199,6 +264,21 @@ footer a {
     header {
         padding: 1%;
     }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr;
+        gap: 20px;
+        padding: 2%;
+    }
+
+    aside {
+        font-size: 2em;
+        grid-column: span 3;
+        text-align: center;
+    }
+
+
 }
 
 /* Media Query for Large Desktop Viewport */
