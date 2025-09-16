@@ -1,7 +1,7 @@
 /*
-Author:
-Date:
-File Name: 
+Author: Dillon Anderson
+Date: 09/15/2025
+File Name: styles07.css
 */
 
 /* CSS Reset */
@@ -29,6 +29,17 @@ header {
 /* Style rules for main content  */
 main {
 	background-color: #fff;
+}
+
+.multi-column {
+	column-count: 3;
+	column-gap: 20px;
+	padding: 2%;
+	margin: 2%;
+	text-align: justify;
+	column-rule-style: solid;
+	column-rule-width: 2px;
+	column-rule-color: #628c45;
 }
 
 aside {
