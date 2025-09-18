@@ -57,9 +57,9 @@ nav ul {
 }
 
 nav li {
-    display: inline-block;
+    display: block;
     font-size: 1.5em;
-    border-top: none;
+    border-top: 1px solid #e5e9fe;
 }
 
 nav li a {
@@ -109,12 +109,8 @@ main ul {
     border-radius: 8px;
 }
 
-#contact .email-link {
-    text-align: center;
-}
-
 #contact a {
-    color: #4645a8;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
 }
@@ -135,9 +131,15 @@ main ul {
     display: block;
 }
 
+.email-link a {
+    color:#373684;
+}
+
 #lessons {
     background-color: #c0caf7;
 }
+
+/* Style rules for map */
 
 .map {
     border: 5px solid #373684;
@@ -185,6 +187,47 @@ footer a {
         font-family: Verdana, Arial, sans-serif;
         font-size: 1.5em;
         font-weight: bold;
+    }
+
+    #rental h2 {
+        text-align: center;
+        font-size: 1.5em;
+        background-color: transparent;
+    }
+
+    .map {
+        width: 100%;
+        height: auto;
+        border: 2px solid #373684;
+    }
+
+    /* Style rule for table */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    caption {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 1%;
+    }
+
+    th, td {
+        background-color: 1px solid #373684;
+        padding: 2%;
+    }
+
+    th {
+        background-color: #373684;
+        color: #fff;
+        font-size: 1.15em;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #b7b7e1;
     }
 }
 
@@ -261,6 +304,12 @@ footer a {
         font-size: 1.5em;
         font-weight: bold;
     }
+
+    #rental h2 {
+        text-align: center;
+        font-size: 1.5em;
+        background-color: transparent;
+    }
 }
 
 /* Media Query for Desktop Viewport */
@@ -314,6 +363,17 @@ footer a {
 
     aside {
         grid-column: 1 / span 4;
+    }
+
+    #rental h2 {
+        text-align: center;
+        font-size: 1.5em;
+        background-color: transparent;
+    }
+
+    /* Desktop Viewport: Style rules for table */
+    table {
+        width: 70%;
     }
 }
 
