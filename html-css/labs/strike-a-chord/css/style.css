@@ -229,6 +229,32 @@ footer a {
     tr:nth-child(odd) {
         background-color: #b7b7e1;
     }
+
+    /* Style rules for Form elements */
+    fieldset, input {
+        margin-bottom: 2%;
+    }
+
+    fieldset legend {
+        font-size: 1.25em;
+        font-weight: bold;
+    }
+
+    label {
+        display: block;
+        padding-top: 3%;
+    }
+
+    form #submit {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        padding: 3%;
+        background-color: #b7b7e1;
+        font-size: 1em;
+    }
 }
 
 
@@ -268,6 +294,41 @@ footer a {
     .map {
         width: 500px;
         height: 450px;
+    }
+
+    /* Tablet Viewport: Style rule for table */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    caption {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 1%;
+    }
+
+    th, td {
+        background-color: 1px solid #373684;
+        padding: 2%;
+    }
+
+    th {
+        background-color: #373684;
+        color: #fff;
+        font-size: 1.15em;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #b7b7e1;
+    }
+
+    /* Tablet Viewport: Style rule for form element */
+    form {
+        width: 70%;
+        margin: 0 auto;
     }
 
     .grid {
@@ -310,6 +371,37 @@ footer a {
         font-size: 1.5em;
         background-color: transparent;
     }
+
+        /* Style rules for Form elements */
+    fieldset, input {
+        margin-bottom: 2%;
+    }
+
+    fieldset legend {
+        font-size: 1.25em;
+        font-weight: bold;
+    }
+
+    label {
+        display: block;
+        padding-top: 3%;
+    }
+
+    form #submit {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        padding: 3%;
+        background-color: #b7b7e1;
+        font-size: 1em;
+    }
+
+    #form h2 {
+        display: transparent;
+    }
+
 }
 
 /* Media Query for Desktop Viewport */
@@ -374,6 +466,17 @@ footer a {
     /* Desktop Viewport: Style rules for table */
     table {
         width: 70%;
+    }
+
+    /* Desktop Viewport: Style rules for form elements */
+    .form-grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 20px;
+    }
+
+    .btn {
+        grid-column: 1 / span 2;
     }
 }
 
