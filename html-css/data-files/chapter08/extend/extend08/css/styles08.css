@@ -1,0 +1,64 @@
+/* 
+Student Name: Dillon Anderson
+Date: 09/17/2025
+File Name: styles08.css
+*/
+
+/* CSS Reset */
+body, main, footer, table {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Style rule for body */
+body {
+    background-color: #ffe5dc;
+    font-family: sans-serif;
+}
+
+/* Style rule for footer element */
+footer {
+    text-align: center;
+    padding: 2%;
+}
+
+/* Style rules for caption element */
+caption {
+    font-size: 2em;
+    padding: 2%;
+    margin-top: 2%;
+    color: #792101;
+    text-align: center;
+
+}
+
+/* Style rule for table element */
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    box-shadow: #792101 0px 4px 8px;
+    border: 3px solid #fd4d0c;
+}
+
+
+/* Style rules for table, tr, th, and td elements */
+th, td {
+    border: 1px solid #bb8871;
+    padding: 2%;
+    text-align: center;
+}
+
+th {
+    background-color: #792101;
+    color: #ffffff;
+}
+
+td {
+    text-align: left;
+}
+
+tr:nth-child(odd) {
+    background-color: #fe9772;
+}
