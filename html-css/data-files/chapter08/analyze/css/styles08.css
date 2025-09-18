@@ -12,13 +12,22 @@ body {
 
 /* Style for the container element */
 #container {
-	width: 90%;
+	width: 80%;
 	margin: 0 auto;
 }
 
 /* Style rules for form elements */
 fieldset, input {
 	margin-bottom: 2%;
+}
+
+fieldset legend {
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+fieldset label {
+	display: block;
 }
 
 /* Style rule for btn class selector */
@@ -54,4 +63,5 @@ footer {
 		grid-column: 1 / span 2;
 		padding: 3%;
 	}
+
 }
