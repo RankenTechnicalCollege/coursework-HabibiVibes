@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>CH8 Homework - Forms</title>
+</head>
+
+<body>
+    <main>
+        <h1>Music Survey</h1>
+            <form>
+
+                <p>Name:</p>
+
+                    <input type="text" id="name" name="name" required>
+
+                <p>E-Mail:</p>
+
+                    <input type="email" id="email" name="email" required>
+
+                <fieldset>
+
+                    <legend>Select your favorite music genre:</legend>
+
+                        <input type="radio" id="rock" name="genre" value="rock" required>
+                        <label for="rock">Rock</label><br>
+
+                        <input type="radio" id="pop" name="genre" value="pop">
+                        <label for="pop">Pop</label><br>
+
+                        <input type="radio" id="jazz" name="genre" value="jazz">
+                        <label for="jazz">Jazz</label><br>
+
+                        <input type="radio" id="classical" name="genre" value="classical">
+                        <label for="classical">Classical</label><br>
+
+                        <input type="radio" id="hiphop" name="genre" value="hiphop">
+                        <label for="hiphop">Hip-Hop</label><br>
+
+                        <input type="radio" id="country" name="genre" value="country">
+                        <label for="country">Country</label><br>
+
+                        <input type="radio" id="electronic" name="genre" value="electronic">
+                        <label for="electronic">Electronic</label><br>
+
+                        <input type="radio" id="other" name="genre" value="other">
+                        <label for="other">Other</label><br>
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>Select What music services that you use (one or more):</legend>
+
+                        <input type="checkbox" id="spotify" name="service" value="spotify">
+                        <label for="spotify">Spotify</label>
+
+                        <input type="checkbox" id="applemusic" name="applemusic" value="applemusic">
+                        <label for="applemusic">Apple Music</label>
+
+                        <input type="checkbox" id="pandora" name="pandora" value="pandora">
+                        <label for="pandora">Pandora</label>
+
+                        <input type="checkbox" id="youtube" name="youtube" value="youtube">
+                        <label for="youtube">YouTube</label>
+
+                        <input type="checkbox" id="amazonmusic" name="amazonmusic" value="amazonmusic">
+                        <label for="amazonmusic">Amazon Music</label>
+
+                        <input type="checkbox" id="tidal" name="tidal" value="tidal">
+                        <label for="tidal">Tidal</label>
+
+                        <input type="checkbox" id="soundcloud" name="soundcloud" value="soundcloud">
+                        <label for="soundcloud">SoundCloud</label>
+
+                        <input type="checkbox" id="iheartradio" name="iheartradio" value="iheartradio">
+                        <label for="iheartradio">iHeartRadio</label>
+
+                        <input type="checkbox" id="qobuz" name="qobuz" value="qobuz">
+                        <label for="qobuz">Qobuz</label>
+
+                        <input type="checkbox" id="deezer" name="deezer" value="deezer">
+                        <label for="deezer">Deezer</label>
+
+                        <input type="checkbox" id="siriusxm" name="siriusxm" value="siriusxm">
+                        <label for="siriusxm">SiriusXM</label>
+
+                        <input type="checkbox" id="other-service" name="other-service" value="other-service">
+                        <label for="other-service">Other</label>
+
+                </fieldset>
+
+                <p>What does music do for you?</p>
+
+                    <textarea rows="3" cols="60" style="overflow:auto;"></textarea>
+
+                <button type="submit">Submit</button>
+
+                <button type="reset">Reset</button>
+            </form>
+    </main>
+</body>
+</html>
