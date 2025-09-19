@@ -5,7 +5,7 @@ File Name: style.ss
 */
 
 /* Style Reset */
-body, header, nav, main, footer, img, h1, ul, figure, section, figcaption, aside  {
+body, header, nav, main, footer, img, h1, ul, figure, section, figcaption, aside, table, th, td, tr, fieldset, input, textarea {
     margin: 0;
     padding: 0;
     border: 0;
@@ -154,6 +154,8 @@ footer li a {
 aside {
     border: 2px solid #000000;
     box-shadow: 4px 4px 8px rgba(37, 37, 37, 0.445);
+    margin: 2% auto;
+    padding: 2%;
 }
 
 figure {
@@ -169,12 +171,94 @@ figure {
     .tablet-desk {
         display: none;
     }
+
+    .mobile-only {
+        display: block;
+    }
+
+    /* Style rule for service ul */
+    .mobile-only h3 {
+        font-size: 2em;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .mobile-only ul {
+        list-style-type: square;
+        padding-left: 20%;
+        padding-right: 20%;
+        margin-bottom: 5%;
+    }
+
+    .mobile-only li {
+        font-size: 1.5em;
+        margin-bottom: 5%;
+    }
+
+    /* Mobile Viewport: Style rule for form element */
+    fieldset, input, textarea {
+        margin: 2%;
+        font-size: 1.25em;
+    }
+
+    fieldset legend {
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+
+    label {
+        display: block;
+        padding-top: 2%;
+        font-size: 1.25em;
+    }
+
+    #form h2 {
+        font-size: 2em;
+        font-weight: bold;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        text-align: center;
+        border-top: 1px solid #000000;
+    }
+
+    form #submit {
+        margin: 0 auto;
+        display: block;
+        padding: 2%;
+        background-color: #000000;
+        color: #ffffff;
+        font-size: 1.5em;
+        border-radius: 10px;
+    }
+
+    fieldset {
+        border: 2px solid #000000;
+        box-shadow: 4px 4px 8px rgba(37, 37, 37, 0.445);
+        padding: 2%;
+        margin-bottom: 5%;
+    }
+
+    textarea {
+        width: 90%;
+        height: 150px;
+        font-size: 1em;
+        padding: 1%;
+        border: 1px solid #000000;
+        box-shadow: 4px 4px 8px rgba(37, 37, 37, 0.445);
+    }
+
 }
 
 /* Media query for tablet */
 @media screen and (min-width: 600px), print {
     .tablet-desk {
         display: block;
+    }
+
+    .mobile-only {
+        display: none;
     }
 
     nav ul {
@@ -230,10 +314,91 @@ figure {
 
     .grid {
         display: grid;
-        grid-template-columns: 2fr 2fr;
+        grid-template-columns: 2fr 2fr 2fr;
         gap: 1em;
         padding: 2%;
     }
+
+    /* Tablet Viewport: Style rule for table element */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0 auto;
+        border: 1px solid #000000;
+        box-shadow: 4px 4px 8px rgba(37, 37, 37, 0.445);
+    }
+
+    th, td {
+        border: 1px solid #000000;
+        padding: 1%;
+        text-align: left;
+        font-size: 1em;
+    }
+
+    th {
+        background-color: #000000;
+        color: #ffffff;
+        font-size: 1.15em;
+    }
+
+    /* Tablet Viewport: Style rule for form element */
+    fieldset, input, textarea {
+        margin: 2%;
+        font-size: 1.25em;
+    }
+
+    fieldset legend {
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+
+    label {
+        display: block;
+        padding-top: 2%;
+        font-size: 1.25em;
+    }
+
+    #form h2 {
+        font-size: 2em;
+        font-weight: bold;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        text-align: center;
+        border-top: 1px solid #000000;
+    }
+
+    form #submit {
+        margin: 0 auto;
+        display: block;
+        padding: 2%;
+        background-color: #000000;
+        color: #ffffff;
+        font-size: 1.5em;
+        border-radius: 10px;
+    }
+
+    fieldset {
+        border: 2px solid #000000;
+        box-shadow: 4px 4px 8px rgba(37, 37, 37, 0.445);
+        padding: 2%;
+        margin-bottom: 5%;
+    }
+
+    textarea {
+        width: 90%;
+        height: 150px;
+        font-size: 1em;
+        padding: 1%;
+        border: 1px solid #000000;
+        box-shadow: 4px 4px 8px rgba(37, 37, 37, 0.445);
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 10px;
+    }
+
 
 }
 
@@ -255,11 +420,26 @@ figure {
         font-size: 1.5em;
     }
 
+
     .grid {
-        grid-template-columns: 4fr 4fr;
-        gap: 2em;
-        padding: 2%;
+        grid-template-columns: 4fr 4fr 4fr;
+        gap: 20px;
     }
+
+    /* Tablet Viewport: Style rule for form element */
+    form {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #service option {
+        font-size: 1.25em;
+        padding: 1%;
+        margin: 1%;
+        border: 1px solid #000000;
+        box-shadow: 4px 4px 8px rgba(37, 37, 37, 0.445);
+    }
+
 }
 
 

@@ -24,14 +24,15 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Services.html">Services</a></li>
-                <li><a href="index.html#about">About Us</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="ContactUs.html">Contact</a></li>
                 <li><a href="groomers.html">Our Groomers</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="contact">
+
         <h2>Contact Us</h2>
         <p>For information about services and booking please reach us at:</p>
 
@@ -43,19 +44,78 @@
 
         <h3>Socials</h3>
         <p>@thepamperedpup</p>
-        <form action="#" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <button type="submit">Send</button>
-        </form>
     </section>
+
+    <div id="form">
+
+        <h2>Send us a message</h2>
+
+            <form class="form-grid"><!-- Start Form -->
+
+                <fieldset>
+
+                    <legend>Contact Form</legend>
+
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="user_name" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="user_email" required>
+
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="user_phone">
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Pet Information</legend>
+
+                        <label for="pet-name">Pet's Name:</label>
+                        <input type="text" id="pet-name" name="pet_name" required>
+
+                        <label for="pet-type">Type of Pet:</label>
+                        <input type="text" id="pet-type" name="pet_type" required>
+
+                        <label for="pet-breed">Breed:</label>
+                        <input type="text" id="pet-breed" name="pet_breed">
+
+                        <label for="pet-age">Age:</label>
+                        <input type="number" id="pet-age" name="pet_age" min="0">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Service Information</legend>
+
+                    <label for="service">Service Interested In:</label>
+
+                    <select id="service" name="user_service">
+
+                        <option value="basic-grooming">Basic Grooming</option>
+
+                        <option value="full-service-grooming">Full Service Grooming</option>
+
+                        <option value="puppy-package">Puppy Package</option>
+
+                        <option value="nail-trim">Nail Trim</option>
+
+                        <option value="ear-cleaning">Ear Cleaning</option>
+
+                        <option value="monthly-package">Monthly Package</option>
+
+                    </select>
+
+                </fieldset>
+
+                <label for="message">Message:</label>
+
+                <textarea id="message" name="user_message" rows="4" cols="30" placeholder="Your message here..."></textarea>
+
+                <button type="submit" id="submit" value="submit" class="btn">Submit</button>
+
+            </form><!-- End Form -->
+
+    </div>
 
     <footer>
 
