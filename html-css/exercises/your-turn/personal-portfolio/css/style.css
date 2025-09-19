@@ -5,7 +5,7 @@ File Name: style.css
 */
 
 /* CSS Reset - A CSS reset is used to create a consistent baseline for styling across different web browsers. Since browsers apply their own default styles to HTML elements, these styles can vary, leading to inconsistencies in how a webpage appears. */
-body, header, nav, main, footer, img, h1, ul, figure, figcaption, article, aside, section {
+body, header, nav, main, footer, img, h1, ul, figure, figcaption, article, aside, section, table, caption, th, td, tr, form, input, textarea, button, label {
     margin: 0;
     padding: 0;
     border: 0;
@@ -77,6 +77,7 @@ nav li {
     display: block;
     font-size: 2em;
     border-right: 1px solid #fff;
+    padding: 2%;
 }
 
 nav li a {
@@ -185,6 +186,60 @@ footer a {
         grid-column: 1 / span 1;
         text-align: justify;
     }
+
+    /* CH8 Your turn */
+    .mobile li {
+        line-height: 1.6;
+        padding-bottom: 1%;
+        text-align: left;
+        padding-top: 1%;
+        border: 1px solid #fff;
+    }
+
+    .resume {
+        text-align: center;
+        padding-top: 1%;
+        text-shadow: 4px 4px 8px rgba(190, 188, 188, 0.5);
+        font-size: 2em;
+        border-top: 1px solid #fff;
+    }
+
+    /* Style rule for form element */
+    form {
+        width: 70%;
+        margin: 0 auto;
+        padding: 2%;
+    }
+
+    #form h2 {
+        text-align: center;
+        padding-bottom: 1%;
+        text-shadow: 4px 4px 8px rgba(190, 188, 188, 0.5);
+        font-size: 2em;
+        border-top: 1px solid #fff;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 0.5em;
+        font-weight: bold;
+    }
+
+    form #submit {
+    margin: 0 auto;
+    display: block;
+    padding: 2%;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    font-size: 1.25em;
+    border-radius: 10px;
+    }
+
+    /* Style rule for form grid */
+    .btn {
+        grid-column: 1 / span 2;
+    }
 }
 
 
@@ -202,7 +257,7 @@ footer a {
     /* Tablet Viewport: Style rule for nav area */
 
     nav li {
-        font-size: 2em;
+        font-size: 1.5em;
         border-top: none;
         border-right: 1px solid #fff;
         border-bottom: none;
@@ -235,6 +290,54 @@ footer a {
         line-height: 1.6;
         text-align: justify;
         text-justify: inter-word;
+    }
+
+    /* Tablet Viewport: Style rule for form element */
+    table {
+    border: 1px solid #000;
+    border-collapse: collapse;
+    margin: 0 auto;
+    }
+
+    caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 1%;
+    text-shadow: 4px 4px 8px rgba(190, 188, 188, 0.5);
+    border-top: 1px solid #fff;
+    }
+
+    th, td {
+    border: 1px solid #000000;
+    padding: 1%;
+    }
+
+    td {
+    padding: 1%;
+    font-size: 1.1em;
+    }
+
+    th {
+    background-color: #000000;
+    color: #fff;
+    font-size: 1.15em;
+    }
+
+    tr:nth-child(odd) {
+    background-color: rgba(190, 188, 188, 0.5);
+    }
+
+    /* Tablet Viewport: Style rule for form element */
+    form {
+        width: 80%;
+        margin: 0 auto;
+        padding: 2%;
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 20px;
     }
 }
 
