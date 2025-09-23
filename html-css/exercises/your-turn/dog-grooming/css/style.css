@@ -12,12 +12,14 @@ body, header, nav, main, footer, img, h1, ul, figure, section, figcaption, aside
 }
 
 /* mobile style rules begin */
-.tablet-desk {
+.tablet-desk, #nav-links {
     display: none;
 }
 
 .round {
     border-radius: 8px;
+    box-shadow: 4px 4px 8px rgba(37, 37, 37, 0.445);
+    border: 2px solid #000000;
 }
 
 /* Style rule for body element */
@@ -25,14 +27,6 @@ body {
     background-color: #ffe6cc;
     color: #000000;
     text-decoration: none; 
-}
-
-/* Style rule for image element */
-img {
-    max-width: 100%;
-    display: block;
-    margin: 0 auto;
-    height: 100%;
 }
 
 /* Style rule for header element */
@@ -49,27 +43,6 @@ header h1 {
 /* Style rule for nav elements */
 nav {
     background: linear-gradient(135deg, #000000, #434343); /* Black to dark gray */
-}
-
-nav ul {
-    text-align: center;
-    font-family: "Red Hat Text", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
-
-nav li {
-    display: block;
-    font-size: 2em;
-    padding: 2%;
-    font-weight: bold;
-    border-top: 1px solid #ffe6cc;
-}
-
-nav li a {
-    text-decoration: none;
-    color:#ffffff;
 }
 
 /* Style rule for the main element */
@@ -154,21 +127,12 @@ footer li a {
 aside {
     border: 2px solid #000000;
     box-shadow: 4px 4px 8px rgba(37, 37, 37, 0.445);
-    margin: 2% auto;
     padding: 2%;
 }
 
-figure {
-    border: 2px solid rgba(0, 0, 0, 0.5);
-    box-shadow: 4px 4px 8px rgba(37, 37, 37, 0.445);
-    max-width: 400px;
-    margin: 2% auto;
-}
-
-
 /* Media query for mobile */
 @media screen and (max-width: 599px), print {
-    .tablet-desk {
+    .tab-desk, #nav-links {
         display: none;
     }
 
@@ -195,6 +159,31 @@ figure {
     .mobile-only li {
         font-size: 1.5em;
         margin-bottom: 5%;
+    }
+
+    /* Mobile Viewport: Style rule for nav elements */
+    .mobile-nav a {
+        text-decoration: none;
+        color:#fff;
+        font-size: 2em;
+        display: block;
+        text-align: center;
+        padding: 2%;
+    }
+
+    .mobile-nav a.nav-icon {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #000;
+        padding: 2%;
+    }
+
+    .nav-icon div {
+        height: 40px;
+        width: 40px;
+        color: #000;
     }
 
     /* Mobile Viewport: Style rule for form element */
@@ -263,6 +252,7 @@ figure {
         display: none;
     }
 
+    /* Tablet Viewport: Style rule for nav elements */
     nav ul {
         display: flex;
         justify-content: center;
@@ -270,10 +260,11 @@ figure {
     }
 
     nav li {
-        display: inline;
-        padding: 1%;
         font-size: 1.5em;
-        border: 1px solid #ffffff;
+        border-right: 1px solid #ffffff;
+        display: block;
+        padding: 2%;
+        font-weight: bold;
     }
 
     nav li a {
@@ -281,13 +272,7 @@ figure {
         color:#ffffff;
     }
 
-    nav li a:hover {
-        color: #ffe6cc;
-    }
-
-    main {
-        margin: 0 10%;
-    }
+    /* Tablet Viewport: Style rule for main element */
 
     main h2 {
         font-size: 2.5em;
@@ -301,6 +286,7 @@ figure {
         font-size: 1.25em;
     }
 
+    /* Tablet Viewport: Style rule for footer element */
     footer ul {
         display: flex;
         justify-content: center;
@@ -314,6 +300,7 @@ figure {
         border: none;
     }
 
+    /* Source images in a three-column grid layout */
     .grid {
         display: grid;
         grid-template-columns: 2fr 2fr 2fr;
@@ -401,14 +388,41 @@ figure {
         gap: 10px;
     }
 
+    /* Tablet Viewport: Style rule for img element */
+    img {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+        box-shadow: 4px 4px 8px rgba(37, 37, 37, 0.445);
+    }
+
+    /* Tablet Viewport: Animation */
+    @-webkit-keyframes text-animation {
+        0% { font-size: 1em; }
+        50% { font-size: 2em; }
+        100% { font-size: 1.35em; }
+    }
+
+    @keyframes text-animation {
+        0% { font-size: 1em; }
+        50% { font-size: 2em; }
+        100% { font-size: 1.35em; }
+    }
+
+    figcaption {
+        -webkit-animation-name: text-animation;
+        animation-name: text-animation;
+        -webkit-animation-delay: 3s;
+        animation-delay: 3s;
+        -webkit-animation-duration: 3s;
+        animation-duration: 5s;
+    }
+
 
 }
 
 /* Media query for desktop */
 @media screen and (min-width: 900px), print {
-    main {
-        margin: 0 20%;
-    }
 
     main h2 {
         font-size: 3em;
@@ -424,13 +438,22 @@ figure {
 
 
     .grid {
-        grid-template-columns: 4fr 4fr 4fr;
+        grid-template-columns: 4fr 4fr 4fr 4fr;
         gap: 20px;
+    }
+
+    /* Desktop Viewport: Style rule for nav elements */
+    nav li a:hover {
+        color: #ffe6cc;
+        background-color: #3f3e3e;
+        text-shadow: 1px 1px 2px #000000;
+        transform: scale(4.4);
+        transition: transform 0.3s ease;
     }
 
     /* Tablet Viewport: Style rule for form element */
     form {
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
     }
 
@@ -442,14 +465,18 @@ figure {
         box-shadow: 4px 4px 8px rgba(37, 37, 37, 0.445);
     }
 
+    img {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+        box-shadow: 4px 4px 8px rgba(37, 37, 37, 0.445);
+    }
+
 }
 
 
 /* Media query for large desktop */
 @media screen and (min-width: 1200px), print {
-    main {
-        margin: 0 25%;
-    }
 
     main h2 {
         font-size: 3.5em;

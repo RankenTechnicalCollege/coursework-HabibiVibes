@@ -18,10 +18,29 @@
     <link rel="manifest" href="images/site.webmanifest">
 </head>
 <body>
+
+    <!-- Mobile Nav -->
+    <nav class="mobile-nav" aria-label="Mobile Navigation">
+        <div id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="Services.html">Services</a>
+            <a href="AboutUs.html">About Us</a>
+            <a href="ContactUs.html">Contact</a>
+            <a href="groomers.html">Our Groomers</a>
+        </div>
+        <a class="nav-icon" onclick="hamburger()">
+            <div id="icon">&#9776;</div>
+        </a>
+    </nav>
+    <!-- End Mobile Nav -->
+
+    <!-- Use the header area to add the logo and title of the webpage -->
     <header>
         <img src="images/dog-banner.jpg" alt="The Pampered Pup Logo">
         <h1>The Pampered Pup</h1>
-        <nav>
+    </header>
+
+        <nav aria-label="Main Navigation" class="tab-desk">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Services.html">Services</a></li>
@@ -30,7 +49,7 @@
                 <li><a href="groomers.html">Our Groomers</a></li>
             </ul>
         </nav>
-    </header>
+
 
     <main>
 
@@ -134,5 +153,8 @@
                 <li><a href="https://www.twitter.com/ThePamperedPup" target="_blank">Twitter</a></li>
             </ul>
     </footer>
+
+    <script src="scripts/script.js"></script>
+
 </body>
 </html>
