@@ -1,38 +1,55 @@
 <!DOCTYPE html>
-<!-- Student's Name, Today's Date -->
+<!--
+Student's Name: Dillon Anderson
+Today's Date: 09/22/2025
+File Name: extend10.html
+-->
 <html lang="en">
 <head>
- 
+
     <title>Chapter 10, Extend</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/styles.css">
-   
+    <script src="scripts/script.js"></script>
+    <script src="jquery-3.7.1.min.map"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
 	<div id="wrapper">
-        
+
         <h1>Learning How to Use jQuery</h1>
-	
+
 		<article id="main">
-		
+
                 <p>I know how to create HTML pages.</p>
                 <p>I know how to style webpages with CSS.</p>
                 <p>I know how to add functionality to webpages with JavaScript.</p>
                 <p>I understand how to use the jQuery library.</p>
 
-                <button>Hide</button>
-                <button>Show</button>
-		
+                <button id="hide" type="button">Hide</button>
+                <button id="show" type="button">Show</button>
+
+                <script>
+                    $(document).ready(function(){
+                        $("#hide").click(function(){
+                            $("article p").hide();
+                        });
+                        $("#show").click(function(){
+                            $("article p").show();
+                        });
+                    });
+                </script>
+
 		</article>
-        
+
         <footer>
-            <p>Student's Name: </p>
-            <p>The latest version of jQuery is: </p>
-            <p>Resource used to complete this assignment: </p>
+            <p>Student's Name: Dillon Anderson</p>
+            <p>The latest version of jQuery is: 3.7.1</p>
+            <p>Resource used to complete this assignment: jQuery documentation</p>
         </footer>
-	
+
 	</div>
 
 </body>
