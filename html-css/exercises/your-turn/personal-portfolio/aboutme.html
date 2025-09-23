@@ -17,9 +17,26 @@
 
     <div id="container">
 
+    <!-- Mobile Nav -->
+    <nav class="mobile-nav" aria-label="Mobile Navigation">
+        <div id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="aboutme.html">About Me</a>
+            <a href="projects.html">Projects</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+        <a class="nav-icon" onclick="hamburger()">
+            <div id="icon">&#9776;</div>
+        </a>
+    </nav>
+    <!-- End Mobile Nav -->
+    <!-- Use the header area to add the logo and title of the webpage-->
+
         <header>
             <h1>Welcome to My Portfolio</h1>
-            <nav>
+        </header>
+
+            <nav class="tab-desk" aria-label="Main Navigation">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="aboutme.html">About Me</a></li>
@@ -27,7 +44,7 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-        </header>
+
 
         <main>
 
@@ -148,5 +165,8 @@
         <p>&copy; 2025 Dillon Anderson. All rights reserved.</p>
         <p><a href="mailto:dillon_anderson@insideranken.org">dillon_anderson@insideranken.org</a></p>
     </footer>
+
+    <script src="scripts/script.js"></script>
+
 </body>
 </html>
