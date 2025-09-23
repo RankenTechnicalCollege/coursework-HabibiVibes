@@ -21,17 +21,37 @@
 
 <body>
     <div id="wrapper">
-        <header>
-            <div class="tab-desk">
-                <div class="mobile">
-                    <h1>&#128062; Wild Rescues</h1>
-                    <h3>Rescue. Rehabilitate. Release</h3>
-                </div>
-            <a href="index.html"><img src="images/baby-hawk.jpg" alt="rescued baby hawk"></a>
+        <!-- Mobile Nav -->
+        <nav class="mobile-nav" aria-label="Mobile Navigation">
+            <div id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About us</a>
+                <a href="partnership.html">Partnership</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="faqs.html">FAQs</a>
+                <a href="contact.html">Contact</a>
             </div>
+            <a class="nav-icon" onclick="hamburger()">
+                <div id="icon">&#9776;</div>
+            </a>
+        </nav>
+        <!-- End Mobile Nav -->
+        <!-- Use the header area to add the logo and title of the webpage-->
+        <header>
+
+            <div class="mobile">
+                <h1>&#128062; Wild Rescues &#128062;</h1>
+                <h3>Rescue. Rehabilitate. Release</h3>
+            </div>
+
+            <div class="tab-desk">
+                <h3>Rescue. Rehabilitate. Release</h3>
+                <a href="index.html"><img src="images/baby-hawk.jpg" alt="rescued baby hawk"></a>
+            </div>
+
         </header>
 
-        <nav>
+        <nav aria-label="Main Navigation" class="tab-desk">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About us</a></li>
@@ -121,6 +141,8 @@
             <p><a href="mailto:contact@wildrescues.net">contact@wildrescues.net</a></p>
         </footer>
     </div>
+
+    <script src="scripts/script.js"></script>
 
 </body>
 </html>
