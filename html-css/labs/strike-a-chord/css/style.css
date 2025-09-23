@@ -22,14 +22,6 @@ img {
     box-sizing: border-box;
 }
 
-/* Style rules for mobile viewport */
-
-
-/* Hide tab-desk class */
-.tab-desk {
-    display: none;
-}
-
 /* Style rules for header content */
 header {
     text-align: center;
@@ -39,6 +31,9 @@ header {
 
 h1 {
     font-family: DM Serif Display;
+    font-size: 1.5em;
+    padding: 4%;
+    margin-right: 15%;
 }
 
 h2 {
@@ -56,16 +51,10 @@ nav ul {
     padding: 1%;
 }
 
-nav li {
-    display: block;
-    font-size: 1.5em;
-    border-top: 1px solid #e5e9fe;
-}
 
 nav li a {
     display: block;
     color: #fff;
-    padding: 0.5em 1em;
     text-decoration: none;
 }
 
@@ -161,6 +150,12 @@ footer a {
 
 /* Media query for mobile viewport */
 @media screen and (max-width: 549px) {
+    
+    /* Hide tab-desk class */
+    .tab-desk, #menu-links {
+        display: none;
+    }
+    
     aside {
         text-align: center;
         font-size: 1.5em;
@@ -255,6 +250,29 @@ footer a {
         background-color: #b7b7e1;
         font-size: 1em;
     }
+
+    /* Style rules for mobile-nav */
+    .mobile-nav a {
+        color: #fff;
+        text-align: center;
+        font-size: 2em;
+        text-decoration: none;
+        padding: 3%;
+        display: block;
+    }
+
+    .mobile-nav a.menu-icon {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .menu-icon div {
+        height: 50px;
+        width: 50px;
+        background-color: #373684;
+    }
 }
 
 
@@ -266,9 +284,19 @@ footer a {
         display: block;
     }
 
+    .mobile-nav {
+        display: none;
+    }
+
     /* Tablet Viewport: Style rule for header content */
     span.tab-desk {
         display: inline;
+    }
+
+    header h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 2em;
     }
 
     /* Tablet Viewport: Style rules for nav area */
@@ -277,6 +305,12 @@ footer a {
         display: inline-block;
         font-size: 1.5em;
         border-right: 1px solid #e5e9fe;
+    }
+
+    nav ul {
+        list-style-type: none;
+        text-align: center;
+        padding: 1%;
     }
 
     nav li:last-child {
@@ -288,6 +322,9 @@ footer a {
         padding-bottom: 0.25em;
         padding-left: 0.5em;
         padding-right: 0.5em;
+        display: block;
+        color: #fff;
+        text-decoration: none;
     }
 
     /* Tablet Viewport: Style rule for map */
@@ -423,6 +460,7 @@ footer a {
     nav li a:hover {
         color: #373684;
         background-color: #e5e9fc;
+        transform: scale(1.2);
     }
 
     /* Desktop Viewport: Style rule for main content */
