@@ -10,13 +10,13 @@ var heading = document.querySelector("#answer h2");
 
 // Hamburger menu function 
 function menu() {
-    var navLinks = document.getElementById("navLinks");
+    var navlinks = document.getElementById("nav-links");
     var menuicon = document.getElementById("icon");
-    if (navLinks.style.display === "block") {
-        navLinks.style.display = "none";
+    if (navlinks.style.display === "block") {
+        navlinks.style.display = "none";
         menuicon.style.color = "#2a1f14";
     } else {
-        navLinks.style.display = "block";
+        navlinks.style.display = "block";
         menuicon.style.color = "#f6eee4";
     }
 }
