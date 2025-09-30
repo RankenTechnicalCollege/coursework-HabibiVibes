@@ -1,5 +1,9 @@
-<!doctype html>
-<!-- Student's Name, Current Date -->
+<!DOCTYPE html>
+<!--
+Student's Name: Dillon Anderson
+Date: 09/30/2025
+File Name: index.html
+-->
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -12,29 +16,62 @@
     <title>NYC Highlights | Extend Your Knowledge 12</title>
   </head>
   <body>
-    
+
     <!-- Bootstrap Jumbotron -->
     <header class="jumbotron jumbotron-fluid text-center mb-0">
           <div class="container">
             <h1 class="display-3">New York City Views</h1>
           </div>
     </header>
-    
+
     <!-- Main Content Area -->
     <main class="container my-5">
-            
+      <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+
+      <div class="carousel-indicators">
+        <button type="button" data-target="#carouselExampleCaptions" data-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-target="#carouselExampleCaptions" data-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-target="#carouselExampleCaptions" data-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      </div>
+
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <img src="images/new-york-east.jpg" class="d-block w-100" alt="East Side of New York City">
+        </div>
+
+        <div class="carousel-item active">
+          <img src="images/new-york-empire.jpg" class="d-block w-100" alt="Empire State Building">
+        </div>
+
+        <div class="carousel-item active">
+          <img src="images/new-york-south.jpg" class="d-block w-100" alt="South Side of New York City">
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+
+      </div>
+
     </main>
-    
+
     <!-- Footer -->
     <footer class="jumbotron-fluid text-center bg-dark p-2">
-       
+
         <div class="container text-white">
             <p>&copy; Copyright 2021. All Rights Reserved.</p>
-            <p>Webpage Created by: Student's Name</p>
+            <p>Webpage Created by: Dillon Anderson</p>
         </div>
-        
-    </footer>  
-    
+
+    </footer>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
