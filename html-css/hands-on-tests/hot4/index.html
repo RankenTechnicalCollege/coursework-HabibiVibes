@@ -41,9 +41,122 @@ File Name: index.html
                 </div>
             </div>
             <!-- Column 2: List Group + Badges -->
+            <div class="col-md">
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Beef Blend
+                        <span class="badge bg-warning text-dark rounded-pill">80/20</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Cheese Type
+                        <span class="badge bg-warning text-dark rounded-pill">Pepper Jack</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Bun Type
+                        <span class="badge bg-warning text-dark rounded-pill">Brioche</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- Column 3: Responsive Image -->
+            <div class="col-md">
+                <img src="images/smashburger.avif" class="img-fluid rounded" alt="Smash Burger">
+            </div>
+            <!-- Column 4: Modal -->
+            <div class="col-md">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#burgerModal">
+                    Secret Sauce Recipe
+                </button>
+                <div class="modal fade" id="burgerModal" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">My Sauce</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                Mayo, Ketchup, Mustard, Relish, Vinegar, Paprika, Garlic Powder, Onion Powder, Sugar, Salt, Pepper, cayenne.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Column 5: Paragraph and Span Heading -->
+            <div class="col-md">
+                <p>
+                    <span class="h4">Why Smash Burgers?</span><br>
+                    Smash burgers create a delicious crust that locks in juices, delivering maximum flavor in every bite.
+                </p>
+            </div>
         </div>
     </div>
 
+    <!-- Carousel -->
+    <div id="burgerCarousel" class="carousel slide my-5" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/smashburger.avif" class="d-block w-100" alt="Smash Burger 1">
+            </div>
+            <div class="carousel-item">
+                <img src="images/smashburger2.jpg" class="d-block w-100" alt="Smash Burger 2">
+            </div>
+            <div class="carousel-item">
+                <img src="images/smashburger3.webp" class="d-block w-100" alt="Smash Burger 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#burgerCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#burgerCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- Cards -->
+    <div class="card-group my-4">
+        <div class="card bg-dark text-white">
+            <img src="images/pattie.webp" class="card-img" alt="Pattie">
+            <div class="card-img-overlay">
+                <h5 class="card-title">Pre Cooked Patties</h5>
+                <p class="card-text">Ready to grill, just smash and sear!</p>
+            </div>
+        </div>
+        <div class="card bg-dark text-white">
+            <img src="images/cheese.jpg" class="card-img" alt="Cheese">
+            <div class="card-img-overlay">
+                <h5 class="card-title">I like to use Pepper Jack Cheese</h5>
+                <p class="card-text">Melts perfectly over your patties. Adds a little spice!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Icon Grid -->
+    <div class="container text-center my-4">
+        <div class="row-cols-3">
+            <div class="col"><i class="bi bi-fire" style="font-size:2rem;"></i><p>Grilled</p></div>
+            <div class="col"><i class="bi bi-droplet-half" style="font-size:2rem;"></i><p>Juicy</p></div>
+            <div class="col"><i class="bi bi-emoji-smile" style="font-size:2rem;"></i><p>Tasty</p></div>
+            <div class="col"><i class="bi bi-lightning" style="font-size:2rem;"></i><p>Quick Cook</p></div>
+            <div class="col"><i class="bi bi-heart" style="font-size:2rem;"></i><p>Favorite</p></div>
+            <div class="col"><i class="bi bi-basket" style="font-size:2rem;"></i><p>Fresh</p></div>
+        </div>
+    </div>
+
+    <footer class="bg-dark tect-white mt-5 py-4">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md">
+                    <i class="bi bi-bag-heart" style="font-size:2rem; color:white;"></i>
+                </div>
+                <div class="col-md">
+                    <p>&copy; 2025 Dillon Anderson</p>
+                </div>
+                <div class="col-md">
+                    <a href="index.html" class="text-white text-decoration-none">Home</a>
+                    <a href="form.html" class="text-white text-decoration-none mx-3">Form</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
