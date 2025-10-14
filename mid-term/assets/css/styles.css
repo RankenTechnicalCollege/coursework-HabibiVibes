@@ -1,0 +1,6 @@
+/* Custom Styles for the BRC site */
+.hero-section, header.bg-dark {color: #fff;}
+.card {border: 0;}
+.card.shadow-sm {box-shadow: 0 .5rem 1rem rgba(0,0,0,.08)!important;}
+.navbar-brand {letter-spacing: .2px;}
+.nav-item {margin-left: 15px;}
