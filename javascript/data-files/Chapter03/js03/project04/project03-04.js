@@ -3,8 +3,8 @@
       Project 03-04
 
       Application to write a list of customer reviews
-      Author: 
-      Date:   
+      Author: Dillon Anderson
+      Date:   10/30/2025
 
       Filename: project03-04.js
 */
@@ -21,3 +21,33 @@ let reviews = [
 ];
 let reviewTitles = ["My Favorite Workout Game", "Poor Choreography", "Buggy with Poor Tech Support", "Nice Improvement"];
 
+// starImage Function 
+function starImages(rating) {
+      let starRating = "";
+      for (let i = 0; i < rating; i++) {
+         imageText += "<img src='star.png' alt='star'>";
+      }
+      return imageText;
+}
+
+// Write Reviews Function
+for (let i = 0; i < reviewers.length; i++) {
+      //declare reviewCode variable
+      let reviewCode = "";
+      // else if statements
+      if (reviewType[i] === "P") {
+         reviewCode = "<table class='prime'>";
+      } else if (reviewType[i] === "N") {
+         reviewCode = "<table class='new'>";
+      } else {
+         reviewCode += "<table>";
+      }
+      // write the review to the document
+      reviewCode += "<caption>" + reviewTitles[i] + "</caption>";
+      reviewCode += "<tr><th>By</th><td>" + reviewers[i] + "</td></tr>";
+      reviewCode += "<tr><th>Review Date</th><td>" + reviewDates[i] + "</td></tr>";
+      reviewCode += "<tr><td colspan='2'>" + reviews[i] + "</td></tr>";
+      reviewCode += "</table>";
+      // append the reviewCode to the reviews element
+      document.getElementById("reviews").innerHTML += reviewCode;
+}
