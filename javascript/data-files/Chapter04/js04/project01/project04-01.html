@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
    <!--
       JavaScript 7th Edition
       Chapter 4
       Hands-on Project 4-1
 
-      Author: 
-      Date:   
+      Author: Dillon Anderson
+      Date:   11/7/2025
 
       Filename: project04-01.html
    -->
@@ -29,9 +29,9 @@
       <h2>Moving Estimate</h2>
       <form>
          <label for="wgtBox">Estimated weight @ $0.50 per pound</label>
-         <input id="wgtBox" /> <span>lbs.</span>
+         <input type="number" id="wgtBox" min="0" step="0.1" /> <span>lbs.</span>
          <label for="distBox">Estimated distance @ $0.75 per mile</label>
-         <input id="distBox" /> <span> miles</span>
+         <input type="number" id="distBox" min="0" step="0.1" /> <span> miles</span>
          <label for="setupBox" id="setupLabel">Setup and Installation (add $500)</label>
          <input type="checkbox" id="setupBox" />
          <div id="border"></div>

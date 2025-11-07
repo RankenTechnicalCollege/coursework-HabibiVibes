@@ -9,6 +9,8 @@
       Filename: project04-01.js
 */
 
+"use strict";
+
 // Global Constants
 const COST_PER_LB = 50;
 const COST_PER_MILE = 75;
@@ -30,15 +32,30 @@ function calcTotal() {
    let totalCost = 0;      // Set the initial estimate to $0
    msgBox.innerHTML = "";  // Erase any warnings in the message box
    
+      try {
+         if (!(wgtBox.value > 0)) {
+            throw "!! Enter a positive weight";
+         }
+         totalCost += wgtBox.value * COST_PER_LB;
+      }  catch (errMsg) {
+         msgBox.innerHTML = errMsg;
+      }
 
-      totalCost += wgtBox.value * COST_PER_LB;      
+      try {
+         if (!(distBox.value > 0)) {
+            throw "!! Enter a positive distance";
+         }
+         totalCost += distBox.value * COST_PER_MILE;
+      }  catch (errMsg) {
+         msgBox.innerHTML = errMsg;
+      }
 
+      if (msgBox.innerHTML === "") {
+         msgBox.innerHTML = "Total Cost: $" + totalCost.toFixed(2);
 
-      totalCost += distBox.value * COST_PER_MILE;   
-  
-   
    if (document.getElementById("setupBox").checked) {
-      totalCost += SETUP_COST
+      totalCost += SETUP_COST;
+   }
    }
    
    // Display the moving cost estimate in the totalBox, formatted as currency
