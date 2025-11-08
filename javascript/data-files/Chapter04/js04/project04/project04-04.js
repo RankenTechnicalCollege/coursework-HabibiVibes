@@ -3,21 +3,22 @@
       Project 04-04
 
       Application to determine change from a cash amount
-      Author: 
-      Date:   
+      Author: Dillon Anderson
+      Date:   11/7/2025
 
       Filename: project04-04.js
 */
 
+"use strict";
+
 // Global variables
-let cashBox = document.getElementById(cash);
-let billBox = document.getElementById(bill);
-let changeBox = document.getElementById(change);
+const cashBox = document.getElementById("cash");
+const billBox = document.getElementById("bill");
+const changeBox = document.getElementById("change");
 
 // Event handlers to be run when the cash or bill value changes
-cashBox.addEventListener("change", runRegister);
-billBox.addEventListener("change", runRegister);
-
+cashBox.addEventListener("change", runTheRegister);
+billBox.addEventListener("change", runTheRegister);
 // Function to reset the values in the web page
 function zeroTheRegister() {
    changeBox.value = 0;
@@ -35,10 +36,22 @@ function zeroTheRegister() {
 // Function to run the cash register
 function runTheRegister() {
    zeroTheRegister();
+   const cashVal = Number(cashBox.value);
+   const billVal = Number(billBox.value);
+   const changeValue = cashVal - billVal;
+
+   try { 
+      if (!(changeValue >= 0)) {
+         throw new Error ("Cash amount doesn't cover the bill");
+      }
+      changeBox.value = formatCurrency(changeValue); 
+      calcChange(changeValue); 
+   } catch (error) {
+      document.getElementById("warning").innerHTML = err.message;
+      changeBox.value = "";
+   }
    
-   let changeValue = cashBox.value - billBox.value;  // calculate the change 
    
-   changeBox.value = formatCurrency(changeValue); // format the change as currency
    
    calcChange(changeValue); // Determine the units of currency needed for the change
 }
