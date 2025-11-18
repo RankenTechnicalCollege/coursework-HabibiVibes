@@ -4,7 +4,7 @@
       Project 08-05
 
       Chess Objects used for Chess Games
-      Author: 
+      Author: Dillon Anderson
       Date:   
 
       Filename: project08-05.js
