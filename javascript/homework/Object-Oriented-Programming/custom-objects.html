@@ -7,6 +7,11 @@
 </head>
 <body>
 
+<h2 style="text-align: center; margin-top: 50px;">
+    404 - Content Not Found <br>
+    (Just Kidding!! Check the Console!)
+</h2>
+
 <!-- ================== Exercise 1: Library Book Management ================== -->
 <script>
 // Constructor Function 
@@ -158,7 +163,26 @@ function BankAccount(accountHolder, initialBalance) {
         }
         balance += amount;
         console.log(`${accountHolder} deposited $${amount}. New balance: $${balance}.`);
-    }; 
+    };
+
+    // withdraw(amount) - with validation for sufficient funds
+    this.withdraw = function(amount) {
+        if (amount <= 0) {
+            console.log("Withdrawal amount must be positive.");
+            return;
+        }
+        if (amount > balance) {
+            console.log(`Insufficient funds for ${accountHolder}.`);
+            return;
+        }
+        balance -= amount;
+        console.log(`${accountHolder} withdrew $${amount}. New balance: $${balance}.`);
+    };
+
+    // getBalance() - returns the current balance
+    this.getBalance = function() {
+        return balance;
+    };
 }
 
 // ===== Public Prototype Method - transfer(amount, targetAccount)  =====
@@ -210,6 +234,73 @@ console.log("Final Romina Balance:", account2.getBalance());
 
 // ========== END OF EXERCISE 3 ==========
 </script>
+
+<!-- ================== Exercise 4: Vehicle Inheritance System ================== -->
+ <script>
+// ===== Parent Constructor Function =====
+function Vehicle(make, model, year, color) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+    this.color = color;
+}
+
+// Prototype method for vehicle info
+Vehicle.prototype.getInfo = function() {
+    return `${this.year} ${this.color} ${this.make} ${this.model}`;
+};
+
+// ===== Child Constructor Function: Car =====
+function Car(make, model, year, color, numDoors) {
+    Vehicle.call(this, make, model, year, color); // Inherit properties
+    this.numDoors = numDoors;
+ }
+
+ // Prototype chain for car 
+Car.prototype = Object.create(Vehicle.prototype);
+Car.prototype.constructor = Car;
+
+// unique method for Car
+Car.prototype.honk = function() {
+    console.log(`${this.make} ${this.model} says: Honk honk!`);
+};
+
+// ===== Chile constructor: Truck =====
+function Truck(make, model, year, color, bedLength) {
+    Vehicle.call(this, make, model, year, color); // Inherit properties
+    this.bedLength = bedLength;
+}
+
+// Prototype chain for truck
+Truck.prototype = Object.create(Vehicle.prototype);
+Truck.prototype.constructor = Truck;
+
+// unique method for Truck
+Truck.prototype.loadCargo = function() {
+    console.log(`${this.make} ${this.model} is loading cargo into a ${this.bedLength}ft bed.`);
+};
+
+// ===== Testing Requirement =====
+
+// Create at least 1 Car and 1 Truck instance
+
+// Test Car
+const myCar = new Car("Toyota", "Camry", 2020, "Blue", 4);
+
+// Test Truck
+const myTruck = new Truck("Ford", "F-150", 2023, "Red", 6);
+
+// Test inherited method getInfo()
+console.log(myCar.getInfo());
+console.log(myTruck.getInfo());
+
+// Test unique methods
+myCar.honk();
+myTruck.loadCargo();
+// ========== END OF EXERCISE 4 ==========
+</script>
+
+<!-- ==================== END OF OBJECTS HOMEWORK!!!!! ======================= -->
 
 </body>
 </html>
