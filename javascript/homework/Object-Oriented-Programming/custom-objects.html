@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<!-- ================== Exercise 1 ================== -->
+<!-- ================== Exercise 1: Library Book Management ================== -->
 <script>
 // Constructor Function 
 function Book(title, author, isbn, pages, isAvailable) {
@@ -64,7 +64,7 @@ console.log(book2.getInfo());
 
 </script>
 
-<!-- ================== Exercise 2 ================== -->
+<!-- ================== Exercise 2 - Student Grade Manager ================== -->
 <script>
 // Constructor Function
 function Student(firstName, lastName, studentID, grades) {
@@ -137,6 +137,79 @@ console.log(`New Letter Grade: ${student2.getLetterGrade()}`);
 
 </script>
 
+<!-- ================== Exercise 3 - Bank Account with Private Data ================== -->
+<script>
+// Constructor Function - Private Balance Variable 
+function BankAccount(accountHolder, initialBalance) {
+
+    // Private variable
+    let balance = initialBalance;
+
+    // Public properties
+    this.accountHolder = accountHolder;
+
+    // ===== Privileged Method =====
+
+    // deposit(amount) - with validation for positive amount 
+    this.deposit = function(amount) {
+        if (amount <= 0) {
+            console.log("Deposit must be a positive amount.");
+            return;
+        }
+        balance += amount;
+        console.log(`${accountHolder} deposited $${amount}. New balance: $${balance}.`);
+    }; 
+}
+
+// ===== Public Prototype Method - transfer(amount, targetAccount)  =====
+// use withdraw() and deposit() to transfer money between accounts
+BankAccount.prototype.transfer = function(amount, targetAccount) {
+
+    if (amount <= 0) {
+        console.log("Transfer amount must be positive.");
+        return;
+    }
+
+    if (this.getBalance() < amount) {
+        console.log("Transfer failed: Insufficient funds.");
+        return;
+    }
+
+    // Perform transfer
+    this.withdraw(amount);
+    targetAccount.deposit(amount);
+
+    console.log(`Transferred $${amount} from ${this.accountHolder} to ${targetAccount.accountHolder}.`);
+};
+
+// ===== Testing Requirement =====
+
+// Create at least 2 bank account instances
+const account1 = new BankAccount("Dillon", 500);
+const account2 = new BankAccount("Romina", 300);
+
+// ===== Test getBalance() =====
+console.log("Dillon Balance:", account1.getBalance());
+console.log("Romina Balance:", account2.getBalance());
+
+// ===== Test deposit() =====
+account1.deposit(200);
+account2.deposit(150);
+
+// ===== Test withdraw() =====
+account1.withdraw(100);
+account2.withdraw(50);
+
+// ===== Test transfer() =====
+account1.transfer(200, account2); // Valid transfer
+account2.transfer(1000, account1); // Should fail due to insufficient funds
+
+// ===== Show final balances =====
+console.log("Final Dillon Balance:", account1.getBalance());
+console.log("Final Romina Balance:", account2.getBalance());
+
+// ========== END OF EXERCISE 3 ==========
+</script>
 
 </body>
 </html>
