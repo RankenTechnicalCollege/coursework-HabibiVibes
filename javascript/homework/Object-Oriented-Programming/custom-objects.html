@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Objects Homework</title>
+</head>
+<body>
+
+<!-- ================== Exercise 1 ================== -->
+<script>
+// Constructor Function 
+function Book(title, author, isbn, pages, isAvailable) {
+    this.title = title;
+    this.author = author;
+    this.isbn = isbn;
+    this.pages = pages;
+    this.isAvailable = isAvailable;
+}
+
+// Prototype method: getInfo()
+Book.prototype.getInfo = function() {
+    return `${this.title} by ${this.author}, ISBN: ${this.isbn}, Pages: ${this.pages}, Available: ${this.isAvailable}`;
+};
+
+// Prototype method: checkOut()
+Book.prototype.checkOut = function() {
+    if (this.isAvailable) {
+        this.isAvailable = false;
+        console.log(`${this.title} has been checked out.`);
+    } else {
+        console.log(`${this.title} is already checked out.`);
+    }
+};
+
+// Prototype method: returnBook()
+Book.prototype.returnBook = function() {
+    if (!this.isAvailable) {
+        this.isAvailable = true;
+        console.log(`${this.title} has been returned.`);
+    } else {
+        console.log(`${this.title} was not checked out.`);
+    }
+};
+
+// ===== Testing Requirement =====
+const book1 = new Book("The Great Gatsby", "F. Scott Fitzgerald", "9780743273565", 180, true);
+const book2 = new Book("1984", "George Orwell", "9780451524935", 328, true);
+
+// ===== Test ALL methods =====
+console.log(book1.getInfo());
+book1.checkOut();
+console.log(book1.getInfo());
+book1.returnBook();
+console.log(book1.getInfo());
+
+console.log(book2.getInfo());
+book2.checkOut();
+console.log(book2.getInfo());
+book2.returnBook();
+console.log(book2.getInfo());
+
+// ========== END OF EXERCISE 1 ==========
+
+</script>
+
+<!-- ================== Exercise 2 ================== -->
+<script>
+// Constructor Function
+function Student(firstName, lastName, studentID, grades) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.studentID = studentID;
+    this.grades = grades; // Array of numbers
+}
+
+// Prototype method: calculateAverage() - returns the average of all grades
+Student.prototype.calculateAverage = function() {
+    if (this.grades.length === 0) {
+        return 0; 
+    }
+
+    let total = 0;
+    for (let i=0; i < this.grades.length; i++) {
+        total += this.grades[i];
+    }
+    return total / this.grades.length;
+};
+
+// Prototype method: getLetterGrade() - returns letter grade based on average
+Student.prototype.getLetterGrade = function() {
+    const avg = this.calculateAverage();
+
+    // Determine letter grade
+    if (avg >= 90) {
+        return 'A';
+    } else if (avg >= 80) {
+        return 'B';
+    } else if (avg >= 70) {
+        return 'C';
+    } else if (avg >= 60) {
+        return 'D';
+    } else {
+        return 'F';
+    }
+};
+
+// Prototype method: addGrade(grade) - adds a new grade to the grades array
+Student.prototype.addGrade = function(grade) {
+    this.grades.push(grade);
+    console.log(`Added grade ${grade} for ${this.firstName} ${this.lastName}.`);
+};
+
+// ===== Testing Requirement =====
+
+// Create at least 2 student instances 
+const student1 = new Student("Alice", "Johnson", "S1001", [85, 90, 78]);
+const student2 = new Student("Bob", "Smith", "S1002", [92, 88, 95]);
+
+// ===== Test student1 =====
+console.log("===== Student 1 =====");
+console.log(`Average Grade: ${student1.calculateAverage()}`);
+console.log(`Letter Grade: ${student1.getLetterGrade()}`);
+student1.addGrade(95);
+console.log(`New Average Grade: ${student1.calculateAverage()}`);
+console.log(`New Letter Grade: ${student1.getLetterGrade()}`);
+
+// ===== Test student2 =====
+console.log("===== Student 2 =====");
+console.log(`Average Grade: ${student2.calculateAverage()}`);
+console.log(`Letter Grade: ${student2.getLetterGrade()}`);
+student2.addGrade(89);
+console.log(`New Average Grade: ${student2.calculateAverage()}`);
+console.log(`New Letter Grade: ${student2.getLetterGrade()}`);
+
+// ========== END OF EXERCISE 2 ==========
+
+</script>
+
+
+</body>
+</html>
