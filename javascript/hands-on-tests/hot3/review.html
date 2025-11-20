@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upvote / Downvote Challenge</title>
+    <!-- Bootstrap V5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous"
+    >
+</head>
+<body class="bg-light">
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <div class="card p-4 shadow text-center">
+
+                <h2 class="mb-3">Coding Keyboard Product Review</h2>
+                <p class="text-muted">Is this keyboard a Yay or Nay?</p>
+
+                <img 
+                    src="images/programming_keyboard.jpg"
+                    class="img-fluid rounded mb-3 shadow"
+                    alt="Turbo JavaScript Keyboard"
+                >
+
+                <!-- Button elements for upvote and downvote -->
+                <div class="d-flex justify-content-center gap-3 mb-4">
+                    <button id="upvoteBtn" class="btn btn-success btn-lg">
+                        Upvote 👍
+                    </button>
+                    <button id="downvoteBtn" class="btn btn-danger btn-lg">
+                        Downvote 👎
+                    </button>
+            </div>
+
+            <!-- Results -->
+            <div class="text-start">
+                <p><strong>Total Upvote:</strong> <span id="upvotes">0</span></p>
+                <p><strong>Total Downvote:</strong> <span id="downvotes">0</span></p>
+                <p><strong>Total Score:</strong> <span id="score">0</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script>
+    // Initialize vote counts
+    let upvote = 0;
+    let downvote = 0;
+
+    // Get DOM elements
+    const upvoteBtn = document.getElementById('upvoteBtn');
+    const downvoteBtn = document.getElementById('downvoteBtn');
+
+    // voteDisplay elements
+    const upvoteDisplay = document.getElementById('upvotes');
+    const downvoteDisplay = document.getElementById('downvotes');
+    const scoreDisplay = document.getElementById('score');
+
+    // updateDisplay() function to refresh the vote counts on the page
+    function updateDisplay() {
+        upvoteDisplay.textContent = upvote;
+        downvoteDisplay.textContent = downvote;
+        scoreDisplay.textContent = upvote - downvote;
+    }
+
+    // Event listener for upvote button
+    upvoteBtn.addEventListener('click', function() {
+        upvote++;
+        updateDisplay();
+    });
+
+    // Event listener for downvote button
+    downvoteBtn.addEventListener('click', function() {
+        downvote++;
+        updateDisplay();
+    });
+
+</script>
+</body>
+</html>
