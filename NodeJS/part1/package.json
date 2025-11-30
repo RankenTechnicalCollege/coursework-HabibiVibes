@@ -1,0 +1,12 @@
+{
+  "name": "part1",
+  "version": "1.0.0",
+  "description": "Part 1: Modules",
+  "license": "ISC",
+  "author": "Dillon Anderson",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
