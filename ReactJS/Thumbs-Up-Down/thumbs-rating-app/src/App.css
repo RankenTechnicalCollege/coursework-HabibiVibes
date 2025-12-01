@@ -1,0 +1,111 @@
+
+:root {
+  --green-dark: #0B3D2E;       /* Augusta green */
+  --green-mid: #1C6340;        /* Fairway green */
+  --green-light: #4CAF50;      /* Bright golf accent */
+  --gold-flag: #F2C94C;        /* Pin flag yellow */
+  --sand: #F5E6C8;             /* Sand trap */
+  --white: #ffffff;
+  --text-dark: #222222;
+}
+
+/* Main app container */
+.app {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: var(--green-dark);
+  min-height: 100vh;
+  color: var(--white);
+}
+
+/* Header */
+.header {
+  background-color: var(--green-mid);
+  padding: 25px 15px;
+  color: var(--white);
+  border-bottom: 4px solid var(--gold-flag);
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.header .tagline {
+  font-size: 1rem;
+  color: var(--gold-flag);
+  font-weight: 600;
+}
+
+
+/* Footer */
+.footer {
+  background-color: var(--green-mid);
+  padding: 20px;
+  text-align: center;
+  color: var(--white);
+  border-top: 4px solid var(--gold-flag);
+  margin-top: 40px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+
+/* Product container */
+.product {
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: var(--sand);
+  color: var(--text-dark);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.product-img {
+  width: 100%;
+  max-width: 250px;   /* <-- change this size */
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Thumbs container */
+.thumbs-rating button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  transition: 0.2s ease;
+}
+
+/* 👍 Thumbs Up Button */
+.thumbs-up {
+  background-color: var(--green-light);
+  color: var(--white);
+}
+
+.thumbs-up:hover {
+  background-color: var(--green-mid);
+  transform: scale(1.08);
+}
+
+/* 👎 Thumbs Down Button */
+.thumbs-down {
+  background-color: #b0413e; /* muted bunker red */
+  color: var(--white);
+}
+
+.thumbs-down:hover {
+  background-color: #7a2d2a;
+  transform: scale(1.08);
+}
+
